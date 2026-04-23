@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Expenses.API.Data;
+using Expenses.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Expenses.API.Data;
-using Expenses.API.Models;
 
 namespace Expenses.API.Controllers
 {
@@ -23,7 +18,7 @@ namespace Expenses.API.Controllers
 
         // GET: api/Transactions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Transaction>>> GetTransaction()
+        public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactions()
         {
             return await _context.Transaction.ToListAsync();
         }
