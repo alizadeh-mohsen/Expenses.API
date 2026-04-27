@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { TransactionFormComponent } from './components/transaction-form/transaction-form.component';
 import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { TransactionListComponent } from './components/transaction-list/transact
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class TransactionService {
 
-  private apiUrl = 'https://localhost:7160/';
+  private apiUrl = 'https://localhost:7160/api/';
   constructor(private http: HttpClient) { }
 
   getWeatherForecast(): Observable<Weather[]> {
